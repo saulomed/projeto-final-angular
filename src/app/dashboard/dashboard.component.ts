@@ -10,7 +10,6 @@ declare var google:any;
 })
 export class DashboardComponent implements OnInit {
 
-  //first commit sprint 1
   private dados:any;
   constructor(private dadosService:DadosService) { }
 
