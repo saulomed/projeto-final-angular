@@ -5,7 +5,7 @@ import {RouterModule, Routes} from "@angular/router";
 export const routes: Routes = [
   {
     path:'',
-    redirectTo: '/dashboard',
+    redirectTo: '/jogoDaVelha',
     pathMatch: 'full'
   }
 ]
