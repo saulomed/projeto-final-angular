@@ -106,6 +106,10 @@ export class CalculadoraComponent implements OnInit {
       parseFloat(this.y),
       this.operacao
     );
+    this.x = this.resultado.toString();
+    this.resultado = null;
+    this.y = null;
+    this.operacao = null;
 
   }
 
@@ -115,10 +119,14 @@ export class CalculadoraComponent implements OnInit {
    */
   get display(): string {
     let retorno: string = this.x;
+    if(this.operacao)
+    {
+      retorno += this.operacao
+    }
     if (this.resultado !== null) {
       retorno = this.resultado.toString();
     }else if (this.y !== null) {
-      retorno = this.y;
+      retorno += this.y;
     }
 
     return retorno;
