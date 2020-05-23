@@ -1,15 +1,15 @@
 const express = require('express');
 const path = require('path');
-
 const app = express();
 
-// Serve os arquivos estáticos da pasta dist (gerada pelo ng build)
+// Serve static files....
 app.use(express.static(__dirname + '/dist/projeto-final'));
 
-app.get('/*', function(req,res) {
-
-  res.sendFile(path.join(__dirname+'/dist/projeto-final/index.html'));
+// Send all requests to index.html
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname + '/dist/projeto-final/index.html'));
 });
 
-// Inicia a aplicação pela porta configurada
-app.listen(process.env.PORT || 8080);
+// default Heroku PORT
+app.listen(process.env.PORT || 3000);
+

@@ -1,14 +1,13 @@
 {
   "name": "projeto-final",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node serve.js",
+    "start": "node server.js",
     "startDev": "ng serve",
     "build": "ng build",
     "buildSourceMap": "ng build --source-map",
     "postinstall": "ng build --aot --prod",
-    "heroku-postbuild": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
