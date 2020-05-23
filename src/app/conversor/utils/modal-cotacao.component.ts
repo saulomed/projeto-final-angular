@@ -13,7 +13,7 @@ export class ModalCotacaoComponent implements OnInit {
   @Input()
   id:string;
   @Input()
-  conversaoResponse: ConversaoResponse;
+  conversaoResponse: any;
   @Input()
   conversao: Conversao = new Conversao();
   @Output()
@@ -31,9 +31,9 @@ export class ModalCotacaoComponent implements OnInit {
       return '0';
     }
 
-    return (this.conversao.valor *
-      this.conversaoResponse.rates[this.conversao.moedaDestino])
-      .toFixed(2);
+    let taxa = this.conversorService.getTaxa(this.conversaoResponse, this.conversao)
+
+    return (this.conversao.valor * taxa).toFixed(2);
   }
 
   novaConsulta()
@@ -53,7 +53,7 @@ export class ModalCotacaoComponent implements OnInit {
 
   get dataCotacao(): string
   {
-    return this.conversorService.dataCotacao(this.conversaoResponse);
+    return new Date().toLocaleDateString();//this.conversorService.dataCotacao(this.conversaoResponse);
   }
 
 }

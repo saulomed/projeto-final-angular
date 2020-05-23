@@ -15,7 +15,7 @@ export class ConversorComponent implements OnInit {
   moedas:Moeda[];
   conversao:Conversao;
   possuiErro:boolean;
-  conversaoResponse:ConversaoResponse;
+  conversaoResponse:any;
 
   @ViewChild("conversaoForm", { static: true }) conversaoForm: NgForm;
 
