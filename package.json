@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "buildSourceMap": "ng build --source-map",
+    "postinstall": "ng build --aot --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
