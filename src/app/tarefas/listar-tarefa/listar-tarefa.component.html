@@ -23,7 +23,7 @@
       <input
         type="checkbox"
         [value]="tarefa.id"
-        (click)="alterarStatus(tarefa)"
+        (click)="alterarStatus(tarefa, $event)"
         [checked]="tarefa.concluida">
     </td>
     <td class="text-center" style="width: 200px">
